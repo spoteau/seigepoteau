@@ -1,54 +1,56 @@
 import Image from "next/image";
 import HomeCard from "@/components/HomeCard";
+import Seige from "../(root)/(home)/images/seige.jpg";
+import CV_Item from "@/components/CV_Item";
 
 export default function Home() {
   return (
     <section className="flex size-full flex-col gap-10 text-white">
-      <div className="h-[250px] w-full rounded-[20px] bg-teal-700 bg-cover">
-        <div className="flex h-full flex-col max-md:px-5 max-lg:px-8 lg:p-11">
-          <h2 className="glassmorphism max-w-[270px] rounded py-2 text-center font-bold">
+      <div className="flex h-[250px] w-full rounded-[20px] bg-teal-700 bg-cover">
+        <div className="h-full flex-col max-md:px-5 max-lg:px-8 lg:p-11">
+          <h2 className="glassmorphism max-w-[280px] rounded py-2 text-center font-bold">
             My Resume
           </h2>
-          <div className="flex gap-10 m-5">
-            <div className="relative w-full, max-w-xs aspect-square m-4">
+          <div className="flex gap-2 mr-2 max-w-[280px]">
+            <div className="max-w-xs aspect-square m-2">
               <Image
-                src="/seige.jpg"
+                className="rounded-md top-1"
+                src={Seige}
                 alt="Seige"
-                fill
-                priority
-                sizes="(max-width:320px) 100vw 320px"
+                width={120}
+                height={120}
               />
             </div>
-            <div className="flex flex-col justify-center">
+            <div className="flex-col gap-2 my-2">
               <h1 className="sm:text-sm md:text-lg lg:text-xl font-bold">
                 Seige Poteau
               </h1>
-              <p className="sm:text-sm md:text-lg lg:text-lg">
-                Software Engineer
-              </p>
-            </div>
-
-            <div className="sm:text-xs md:text-lg lg:text-xl font-bold">
-              <p>Master's in Computer Science - 1999</p>
-              <p>Bachelor in Computer Science / Math - 1991</p>
-              <p>Background in Statistics, Education, and Management</p>
+              <div className="sm:text-[8px] md:text-[10px] lg:text-[12px]">
+                <p>Software Engineer</p>
+                <p>35+ years experience</p>
+              </div>
             </div>
           </div>
         </div>
+        <div className="h-full flex-col max-md:px-5 max-lg:px-8 lg:p-11 sm:text-xs md:text-lg lg:text-xl font-bold">
+          <p>Master's in Computer Science - 1999</p>
+          <p>Bachelor in Computer Science / Math - 1991</p>
+          <p>Background in Statistics, Education, and Management</p>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-        <HomeCard
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-2">
+        <CV_Item
           img="/icons/add-meeting.svg"
-          title="Experience"
+          title="35+ years Experience"
           description="Start an instant meeting"
-          className="bg-orange-600"
+          className="bg-white/10"
         />
-        <HomeCard
-          img="/icons/join-meeting.svg"
+        <CV_Item
+          img="/icons/checked.svg"
           title="Skills"
           description="Programming Languages"
-          className="bg-blue-950"
+          className="bg-green-900 w-full"
         />
         {/* <HomeCard
           img="/icons/schedule.svg"

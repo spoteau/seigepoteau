@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Seige Poteau",
   description: "Portfolio of Seige Poteau",
   icons: {
-    icon: "/icons/logo.svg",
+    icon: "/icons/logo.jpg",
   },
 };
 

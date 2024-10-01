@@ -7,9 +7,18 @@ interface homeCardProps {
   img: string;
   title: string;
   description: string;
+  titleCN: string;
+  descCN: string;
 }
 
-const HomeCard = ({ className, img, title, description }: homeCardProps) => {
+const HomeCard = ({
+  className,
+  img,
+  title,
+  description,
+  titleCN,
+  descCN,
+}: homeCardProps) => {
   return (
     <div
       className={cn(
@@ -21,10 +30,17 @@ const HomeCard = ({ className, img, title, description }: homeCardProps) => {
         <Image src={img} alt="icon" width={27} height={27} />
       </div>
       <div className="flex flex-col gap-2 ">
-        <h1 className="sm:text-xs md:text-lg lg:text-2xl text-2xl font-bold">
+        <h1
+          className={cn(
+            "sm:text-xs md:text-lg lg:text-2xl text-2xl font-bold",
+            titleCN
+          )}
+        >
           {title}
         </h1>
-        <p className="sm:text-xs md:text-sm lg:text-lg font-normal">
+        <p
+          className={cn("sm:text-xs md:text-sm lg:text-lg font-normal", descCN)}
+        >
           {description}
         </p>
       </div>

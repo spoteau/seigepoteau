@@ -20,8 +20,6 @@ const Sidebar = () => {
           const isActive =
             pathname === link.route || pathname.startsWith(`${link.route}/`);
 
-          // console.log("isActive", isActive);
-          // console.log("link route", link.route);
           return (
             <Link
               href={link.route}
